@@ -6,15 +6,15 @@ public class experiment_5 {
         Scanner input = new Scanner(System.in);
         int w;
         StringBuffer str2 = null;
-        Handle xms = new Handle();
-        StringBuffer str1 = xms.Read();
+        Handle las = new Handle();
+        StringBuffer str1 = las.Read();
         Homework one = new Homework();
         str2 = one.HW(str1);
         Handle.Write(str2);
 
-        System.out.println("输入要查的字符：");
+        System.out.println("要查询的字符：");
         String z = input.next();
-        w = xms.getCharMaps(z,str1);
+        w = las.getCharMaps(z,str1);
 
         System.out.println("******************学生信息*********************");
         Student la = new Student();
@@ -102,7 +102,7 @@ class Handle{
         String str1 = "";
         StringBuffer str2 = new StringBuffer(str1);
         try {
-            File file = new File("C:\\Java\\File\\B.txt");
+            File file = new File("D:\\Java作业\\File\\B.txt");
             FileReader fr = new FileReader(file);
             BufferedReader bReader = new BufferedReader(fr);
             while ((str1 =bReader.readLine()) != null) {
@@ -119,7 +119,7 @@ class Handle{
 
     public static void Write(StringBuffer s){
         try{
-            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Java\\File\\A.txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("D:\\Java作业\\File\\A.txt"));
             bw.write(s.toString());
             bw.close();
         }catch (IOException e){
@@ -142,3 +142,5 @@ class Handle{
         return w;
     }
 }
+
+
